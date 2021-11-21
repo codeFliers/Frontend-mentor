@@ -26,12 +26,13 @@ Users should be able to:
 
 ### Screenshots
 
-![Preview card desktop](screenshots/nft-preview-card.png)
-![Preview card mobile](screenshots/nft-preview-card-mobile.png)
-![Preview card hover](screenshots/nft-preview-hover.png)
+<img src="screenshots/nft-preview-card.png">
+<p float="left">
+  <img src="screenshots/nft-preview-card-mobile.png" width="400" height="500">
+  <img src="screenshots/nft-preview-hover.png" width="400" height="500">
+</p>
 
 ### Links
-
 - Solution URL: [Github link](https://github.com/codeFliers/Frontend-mentor/tree/main/newbie/NFT%20preview%20card%20component%20challenge%20hub/solution)
 - Solution LIVE: [Github live link](https://codefliers.github.io/Frontend-mentor/newbie/NFT%20preview%20card%20component%20challenge%20hub/solution/)
 ## My process
