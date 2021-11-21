@@ -33,7 +33,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github link](https://github.com/codeFliers/Frontend-mentor/tree/main/newbie/NFT%20preview%20card%20component%20challenge%20hub/solution)
-
+- Solution LIVE: [Github live link] (https://codefliers.github.io/Frontend-mentor/newbie/NFT preview card component challenge hub/solution)
 ## My process
 
 ### Built with
