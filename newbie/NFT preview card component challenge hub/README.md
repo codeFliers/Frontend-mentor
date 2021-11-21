@@ -6,7 +6,7 @@ This is a solution to the [NFT preview card component challenge on Frontend Ment
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
+  - [Screenshot](#screenshots)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -24,7 +24,7 @@ Users should be able to:
 - View the optimal layout depending on their device's screen size
 - See hover states for interactive elements
 
-### Screenshot
+### Screenshots
 
 ![Preview card desktop](screenshots/nft-preview-card.png)
 ![Preview card mobile](screenshots/nft-preview-card-mobile.png)
@@ -66,5 +66,5 @@ html, body {
 
 ### Useful resources
 
-- [resource 1](https://www.freecodecamp.org/news/how-to-center-anything-with-css-align-a-div-text-and-more/) - This helped me to center both horizontally
+- [resource 1](https://www.freecodecamp.org/news/how-to-center-anything-with-css-align-a-div-text-and-more/) - This helped me to center both horizontally and vertically.
 
