@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/codeFliers/Frontend-mentor/tree/main/newbie/NFT%20preview%20card%20component%20challenge%20hub/solution)
+- Solution URL: [Github link](https://github.com/codeFliers/Frontend-mentor/tree/main/newbie/NFT%20preview%20card%20component%20challenge%20hub/solution)
 
 ## My process
 
