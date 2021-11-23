@@ -46,6 +46,6 @@ This is a solution to the [Order summary card challenge on Frontend Mentor](http
 -When "border-radius" doesn't apply, add "overflow:hidden" into the container.  
 -When using float, using multiple float pointing to the same direction with % width seems to work ok.  
 -To make a button 100% clickable, the "button" we have to apply "height: 100%" and "width: 100%" depending of the display.  
--That "Interactive controls must not be nested" (don't do this : <button><a href="#">blabla</a></button>)
+-That "Interactive controls must not be nested" (don't do this : <button><a href="#">blabla</a></button>)  
 -To center the content of a block with multiple block inside : "text-align: center".  
 
