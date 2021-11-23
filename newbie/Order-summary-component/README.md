@@ -39,7 +39,6 @@ This is a solution to the [Order summary card challenge on Frontend Mentor](http
 - Default CSS3
 
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
