@@ -1,0 +1,159 @@
+/* FONT IMPORT */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+html, body {
+    margin: 0;
+    /* have the max height corresponding to the screen height (viewport height) */
+    height: 100vh;
+}
+
+html {
+    background-color: hsl(225, 100%, 94%);
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Red Hat Display', sans-serif;
+    position: relative;
+    color: hsl(224, 23%, 55%);
+    background: url("images/pattern-background-desktop.svg");
+    background-repeat: repeat-x;
+}
+
+.centerVandH {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card {
+    width: 450px;
+    height: 690px;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.card-img {
+    background-image: url("../images/illustration-hero.svg");
+    background-repeat: no-repeat;
+    height: 220px;
+    width: 450px;
+    display: block;
+}
+
+.content {
+    margin-top: 55px;
+}
+
+.content2 {
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.centerContainer {
+    padding: 20px;
+    height: 100%;
+    background-color: hsl(225, 100%, 98%);
+    height: 70px;
+    width: 320px;
+    margin: auto;
+    border-radius: 15px;
+}
+
+footer {
+    height: 100%;
+    width: 360px;
+    margin: auto;
+}
+
+.centerContainer div:nth-child(1) {
+    float: left;
+    width: 20%;
+    padding-top: 5px;
+}
+
+.centerContainer div:nth-child(2) {
+    float: left;
+    width: 60%;
+}
+
+.centerContainer div:nth-child(2) p {
+    margin-top: 0px;
+    line-height: 25px;
+}
+
+.centerContainer div:nth-child(3) {
+    float: left;
+    margin-top: 20px;
+}
+
+.centerContainer div:nth-child(3) a {
+    color: #3E3894;
+}
+
+.clear-fix {
+    clear: both;
+}
+
+.buttonsContainer {
+    text-align: center;
+}
+
+.centerContainer div:nth-child(3) a:hover {
+    color: #766cf1;
+}
+
+.customFontColor1, .button2 a:hover {
+    color: hsl(223, 47%, 23%);
+    font-weight: 700;
+}
+
+.button1 {
+    margin-top: 25px;
+    width: 360px;
+    height: 50px;
+    background-color: #382ae1;
+    border-radius: 10px;
+    box-shadow: 0px 10px 16px 0px rgba(56, 42, 225, 0.41);
+    border: none;
+}
+.button1 a {
+    color: white;
+    padding-top: 14.33px;
+}
+.button1:hover {
+    background-color: #766cf1;
+}
+.button1 a, .button2 a {
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.button2 {
+    margin-top: 20px;
+    display: inline-block;
+    vertical-align: center;
+    width: 150px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+}
+.button2 a {
+    color: hsl(224, 23%, 55%);
+    padding-top: 15px;
+}
+/*
+footer button:first-of-type{ FIRST BUTTON
+}
+footer button:nth-of-type(2){ SECOND BUTTON
+}
+footer button:last-of-type { SECOND BUTTON
+}
+ */
