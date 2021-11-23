@@ -20,13 +20,16 @@ This is a solution to the [Order summary card challenge on Frontend Mentor](http
 ### Screenshot
 
 ![Preview card desktop](screenshots/order-summary-component-desktop.png)
-![Preview card mobile](screenshots/order-summary-component-mobile.png)
-![Preview card hover](screenshots/hovers.png)
+<p float="left">
+  <img src="screenshots/order-summary-component-mobile.png" width="400" height="500">
+  <img src="screenshots/hovers.png" width="400" height="150">
+</p>
+
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://github.com/codeFliers/Frontend-mentor/tree/main/newbie/Order-summary-component/solution)
+- Live Site URL: [Add live site URL here](https://codefliers.github.io/Frontend-mentor/newbie/Order-summary-component/solution)
 
 ## My process
 
@@ -40,8 +43,8 @@ This is a solution to the [Order summary card challenge on Frontend Mentor](http
 
 ### What I learned
 
--When "border-radius" doesn't apply, add "overflow:hidden" into the container.
--When using float, using multiple float pointing to the same direction with % width seems to work ok.
--To make a button 100% clickable, the "button" we have to apply "height: 100%" and "width: 100%" depending of the display.
--To center the content of a block with multiple block inside : "text-align: center"
+-When "border-radius" doesn't apply, add "overflow:hidden" into the container.  
+-When using float, using multiple float pointing to the same direction with % width seems to work ok.  
+-To make a button 100% clickable, the "button" we have to apply "height: 100%" and "width: 100%" depending of the display.  
+-To center the content of a block with multiple block inside : "text-align: center".  
 
