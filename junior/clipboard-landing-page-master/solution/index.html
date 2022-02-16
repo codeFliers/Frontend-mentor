@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | Clipboard landing page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@400;700&display=swap');
+        html {
+            background: url("images/bg-header-desktop.png") no-repeat;
+            background-color: white;
+            /* toute la largueur / sur une hauteur de */
+            background-size: 100% 300px;
+        }
+
+        html, body {
+            margin: 0;
+            /* have the max height corresponding to the screen height (viewport height) */
+            height: 100vh;
+            /*width: 1440px;*/
+            font-size: 18px;
+            font-family: 'Bai Jamjuree', sans-serif;
+        }
+
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+        }
+
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+
+        h1, h2, h3, h4 {
+            color: hsl(210, 1%, 33%);
+            font-weight: 600;
+            font-family: Bai;
+        }
+
+        p {
+            /*color: hsl(210, 10%, 33%);*/
+            color: #A4ACAE;
+            font-size: 15px;
+        }
+
+        #p1, #p2, #p4, #p5, #p6  {
+            /* blanc et transparant pour se fondre avec le background HTML au top */
+            background-color: hsla(0, 0%, 100%, 0);
+
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            margin-top: 85px;
+        }
+
+        .logo {
+            background-image: url("images/logo.svg");
+            width: 85px;
+            height: 85px;
+            margin-bottom: 15px;
+            background-size: cover;
+        }
+
+        #p1 h1, #p2 h1, #p5 h1, #p6 h1 {
+            /*background-color: brown;*/
+            font-family: 'Bai Jamjuree', sans-serif;
+            text-align: center;
+        }
+
+        #p1 p, #p2 p, #p6 p {
+            margin-top: -11px;
+            /*background-color: darkviolet;*/
+            text-align: center;
+        }
+
+        .buttons {
+            display: flex;
+            width: 320px;
+            justify-content: space-between;
+            margin-top: 15px;
+            background-color: white;
+        }
+
+        .buttons button {
+            width: 155px;
+            height: 40px;
+            border-radius: 100px;
+        }
+
+        button a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        button:hover {
+            opacity:0.7;
+        }
+        .f-menu a:hover {
+            color: hsl(171, 66%, 44%);
+        }
+
+        #p7Logos img:hover {
+            filter: invert(59%) sepia(66%) saturate(397%) hue-rotate(121deg) brightness(85%) contrast(85%);
+        }
+
+        .buttons button:first-child {
+            background-color: hsl(171, 66%, 44%);
+            border-color: hsl(171, 66%, 44%);
+        }
+
+        .buttons button:last-child {
+            background-color: #6174FF;
+            border-color: #6174FF;
+
+        }
+        #p2 {
+            margin-top: 76px;
+        }
+        #p2 p {
+            margin-top: -11px;
+            text-align: center;
+        }
+
+        #p3 {
+            display:flex;
+            flex-flow: row wrap;
+            margin-top: 50px;
+            justify-content: center;
+        }
+        #screenImg {
+            min-width: 370px;
+            max-width: 500px;
+            width: 50%;
+            height: 385px;
+            background: url("images/image-computer.png") no-repeat;
+            background-size: 100%;
+        }
+        #screenImgAside {
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            margin-left: 77px;
+            flex-basis: 320px
+        }
+        #screenImgAside h3 {
+            font-family: 'Bai Jamjuree', sans-serif;
+        }
+
+
+        #screenImg2 {
+            margin-top: 55px;
+            /* taille non fix */
+            width: 50%;
+            /* bloc la taille de l'image pour qu'elle ne devienne pas trop petite avec with: 50% */
+            min-width: 370px;
+            height: 450px;
+            background: url("images/image-devices.png") no-repeat;
+            background-size: 100%;
+        }
+        #p4 {
+            flex-wrap: wrap;
+        }
+        #p4 p {
+            text-align: center;
+        }
+
+        #p5 {
+            margin-top: 0px;
+        }
+
+        #p5Aside {
+            display: flex;
+            flex-flow: row wrap;
+
+            justify-content: center;
+            margin-top: 55px;
+        }
+
+        #p5Aside1, #p5Aside2, #p5Aside3 {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            width: 330px;
+            text-align: center;
+        }
+        #p5Aside2, #p5Aside3 {
+            margin-left: 10px;
+        }
+
+
+        #p5Img1, #p5Img2, #p5Img3  {
+            display: flex;
+            background-size: contain;
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+        }
+
+        #p5Img1 {
+            background: url("images/icon-blacklist.svg") no-repeat;
+        }
+        #p5Img2 {
+            background: url("images/icon-text.svg") no-repeat;
+        }
+        #p5Img3 {
+            background: url("images/icon-preview.svg") no-repeat;
+        }
+
+        #brandsLogo {
+            margin-top: 130px;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+            min-height: 100px;
+            margin-left: 60px;
+        }
+        #brandsLogo span:nth-child(1), #brandsLogo span:nth-child(2), #brandsLogo span:nth-child(3),
+        #brandsLogo span:nth-child(4), #brandsLogo span:nth-child(5) {
+            margin-top: 50px;
+            height: 60px;
+            flex-basis: 220px;
+        }
+        #brandsLogo span:nth-child(1) {
+            background: url("images/logo-google.png") no-repeat;
+
+        }
+        #brandsLogo span:nth-child(2) {
+            background: url("images/logo-ibm.png") no-repeat;
+
+        }
+        #brandsLogo span:nth-child(3) {
+            background: url("images/logo-microsoft.png") no-repeat;
+
+        }
+        #brandsLogo span:nth-child(4) {
+            background: url("images/logo-hp.png") no-repeat;
+
+        }
+        #brandsLogo span:nth-child(5) {
+            background: url("images/logo-vector-graphics.png") no-repeat;
+
+        }
+
+        #p7 {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            background-color: #F5F6F8;
+        }
+
+        .myLogo {
+            margin-left: 150px;
+            flex: 0 0 18%;
+            display: flex;
+
+        }
+        .myLogo img{
+            align-self: center;
+            width: 60px;
+        }
+
+
+        #footerMain {
+            align-items: center;
+            flex: 1;
+            /*
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: auto;
+            */
+            display: flex;
+        }
+
+        #p7Logos {
+            flex: 0 0 14%;
+            display: flex;
+            align-items: center;
+        }
+
+        .f-menu{
+            width: 25%;
+        }
+        .f-menu a{
+            display: block;
+            line-height: 2em;
+            text-decoration: none;
+            color: #000;
+        }
+
+        #p7Logos span:nth-child(1), #p7Logos span:nth-child(2), #p7Logos span:nth-child(3) {
+            height: 50px;
+            flex-basis: 50px;
+        }
+
+        #test {
+            margin-top: -30px;
+        }
+
+
+        @media screen and (max-width:970px){
+            #p5 {
+                margin-top: -100px;
+            }
+            #p7Logos {
+                justify-content: center;
+                margin-top: 35px;
+
+            }
+
+            #p7 {
+                flex-direction: column;
+                justify-content: center;
+
+            }
+            .myLogo {
+                margin-bottom: 30px;
+                margin-left: 0px;
+                margin-top: 60px;
+                justify-content: center;
+            }
+            #footerMain {
+                justify-content: center;
+            }
+        }
+
+        @media screen and (max-width:530px){
+            #footerMain {
+                flex-direction: column;
+
+            }
+
+            .f-menu {
+                display: inline-block;
+                text-align: center;
+                width: 200px;
+                /*margin-left: 200px;*/
+            }
+            div.f-menu a {
+                margin-top: 50px;
+            }
+            #test {
+                margin-top: 50px;
+            }
+            #buttonsP6 {
+                flex-direction: column;
+                align-items: center;
+
+            }
+            #buttonsP6 button {
+                margin-top: 35px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div id="p1">
+    <span class="logo"></span>
+
+    <h1>A history of everything you copy</h1>
+
+    <p>
+        Clipboard allows you to track and organize everything you
+        copy. Instantly access your clipboard on all your devices.
+    </p>
+
+    <div class="buttons">
+        <button><a href="#">Download for iOS</a></button>
+        <button><a href="#">Download for Mac</a></button>
+    </div>
+</div>
+
+<div id="p2">
+    <h1>Keep track of your snippets</h1>
+
+    <p>
+        Clipboard instantly stores any item you copy in the cloud,
+        meaning you can access your snippets immediately on all your
+        devices. Our Mac and iOS apps will help you organize everything.
+    </p>
+</div>
+
+<div id="p3">
+    <span id="screenImg"></span>
+
+    <div id="screenImgAside">
+        <div id="screenImgAside1">
+            <h3>Quick Search</h3>
+            <p>Easily search your snippets by content, category, web address, application, and more.</p>
+        </div>
+        <div id="screenImgAside2">
+            <h3>iCloud Sync</h3>
+            <p>Instantly saves and syncs snippets across all your devices.</p>
+        </div>
+        <div id="screenImgAside3">
+            <h3>Complete History</h3>
+            <p>Retrieve any snippets from the first moment you started using the app.</p>
+        </div>
+    </div>
+</div>
+
+<div id="p4">
+    <h2>Access Clipboard anywhere</h2>
+
+    <p>
+        Whether you’re on the go, or at your computer, you can access all your Clipboard
+        snippets in a few simple clicks.
+    </p>
+
+    <span id="screenImg2"></span>
+</div>
+
+<div id="p5">
+    <h1>Supercharge your workflow</h1>
+
+    <p>We’ve got the tools to boost your productivity.</p>
+
+    <div id="p5Aside">
+        <div id="p5Aside1">
+            <span id="p5Img1"></span>
+            <h3>Create blacklists</h3>
+            <p>Ensure sensitive information never makes its way to your clipboard by excluding certain sources.</p>
+        </div>
+        <div id="p5Aside2">
+            <span id="p5Img2"></span>
+            <h3>Plain text snippets</h3>
+            <p>Remove unwanted formatting from copied text for a consistent look.</p>
+        </div>
+        <div id="p5Aside3">
+            <span id="p5Img3"></span>
+            <h3>Sneak preview</h3>
+            <p>Quick preview of all snippets on your Clipboard for easy access.</p>
+        </div>
+    </div>
+</div>
+<div id="brandsLogo">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<div id="p6">
+    <h1>Clipboard for iOS and Mac OS</h1>
+    <p>
+        Available for free on the App Store. Download for Mac or iOS, sync with iCloud
+        and you’re ready to start adding to your clipboard.
+    </p>
+    <div id="buttonsP6" class="buttons">
+        <button><a href="#">Download for iOS</a></button>
+        <button><a href="#">Download for Mac</a></button>
+    </div>
+</div>
+
+<div id="p7">
+    <!-- LEFT -->
+    <div class="myLogo">
+        <img src="images/logo.svg" alt="Logo">
+    </div>
+    <!-- CENTER -->
+    <div id="footerMain">
+        <div class="f-menu">
+            <a href="#">FAQs</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="f-menu">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Preses Kit</a>
+        </div>
+        <div class="f-menu">
+            <a id="test" href="#">Install Kit</a>
+        </div>
+    </div>
+    <!-- RIGHT -->
+    <div id="p7Logos">
+        <span><a href="#"><img src="images/icon-facebook.svg"/></a></span>
+        <span><a href="#"><img src="images/icon-twitter.svg"/></a></span>
+        <span><a href="#"><img src="images/icon-instagram.svg"/></a></span>
+    </div>
+</div>
+<footer>
+    <p class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="https://www.frontendmentor.io/profile/codeFliers">codeFliers</a>.
+    </p>
+</footer>
+</body>
+</html>
