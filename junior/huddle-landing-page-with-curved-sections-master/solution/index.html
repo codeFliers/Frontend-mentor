@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <script src="https://kit.fontawesome.com/40d7496e64.js" crossorigin="anonymous"></script>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | Huddle landing page with curved sections</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+        }
+
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            line-height: 80px;
+        }
+        h3 {
+            color: #7A848D;
+        }
+
+
+        body {
+            line-height: 150%;
+            height: 100vh;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-flow: row wrap;
+        }
+        .column-container {
+            display: flex;
+            flex-direction: column;
+        }
+        #main-container {
+            margin-top: 20px;
+        }
+
+
+        .center {
+            margin: 0 auto;
+            width: 90%;
+        }
+
+        header {
+            justify-content: space-between;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 50px;
+            max-width: 160px;
+        }
+
+        .button {
+            border: 1px solid #CCC;
+            border-color: #FF34B6;
+            border-radius: 100px;
+        }
+
+        .button a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .tryitBtn {
+            width: 130px;
+            height: 50px;
+            text-align: center;
+        }
+
+        .tryitBtn a {
+            line-height: 50px;
+            text-decoration: none;
+            color: #FF34B6;
+        }
+
+
+        #container2 {
+            margin-top: 50px;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+
+        #container2 p {
+            margin-top: 20px;
+            width: 360px;
+        }
+
+        .buttonCustom {
+            margin-bottom: 200px;
+            min-width: 290px;
+        }
+        .buttonCustom a {
+            color: white;
+        }
+        .buttonCustom1 {
+            margin-top: 50px;
+        }
+        .btnCustomCommon {
+            height: 60px;
+            text-align: center;
+            line-height: 50px;
+            width: 50%;
+            max-width: 400px;
+            background-color: #FF34B6;
+        }
+
+        .img {
+            margin-top: 200px;
+            text-align: center;
+        }
+        .img img {
+            width: 100%;
+            max-width: 750px;
+        }
+
+        .stats-container {
+            margin-top: 150px;
+        }
+
+
+        .stats {
+            align-self: center;
+            text-align: center;
+            width: 50%;
+            margin-bottom: 150px;
+        }
+
+        .stats-container {
+            background: url("images/bg-section-top-mobile-1.svg") no-repeat;
+            background-size: 100%;
+            background-position: bottom center;
+        }
+
+        .stats span {
+            font-size: 80px;
+            font-weight: 700;
+        }
+
+        .stats-logo {
+            text-align: center;
+            margin-left: -150px;
+            margin-bottom: 25px
+        }
+
+        .informative {
+            justify-content: center;
+        }
+        .informative p, .test p {
+            margin-top: 40px;
+            text-align: center;
+            margin-left: 20px;
+            margin-right: 20px;
+            width: 350px;
+        }
+        .informative h1 {
+            margin-top: 130px;
+        }
+        .informative img {
+            width: 400px;
+        }
+        .informative .img1 {
+            margin-top: 100px;
+        }
+
+
+        .youruser::before {
+            width: 100%;
+            content: " ";
+            position: absolute;
+            background-image: url(images/bg-section-top-desktop-2.svg);
+            background-size: cover;
+
+            left: 0;
+            height:150px;
+            background-color: white;
+        }
+        .youruser > .img1,.youruser > .illustrationText {
+            margin-top: 200px;
+        }
+
+        .youruser::after {
+            width: 100%;
+            content: " ";
+            background-image: url(images/bg-section-bottom-desktop-2.svg);
+            background-size: cover;
+            bottom: 10px;
+            height:150px;
+            background-color: white;
+        }
+
+        .footer {
+            margin-top: 100px;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            background: url("images/bg-footer-top-mobile.svg") no-repeat;
+            background-size: 100%;
+            height: 400px;
+
+            background-position: bottom center;
+        }
+        .footer h1 {
+            margin-top: -10px;
+        }
+
+        .innerfooter {
+            background-color: #00252E;
+            color: white;
+        }
+
+        .logo2 {
+            width: 400px;
+            height: 50px;
+            max-width: 160px;
+            filter: invert(92%) sepia(100%) saturate(0%) hue-rotate(202deg) brightness(106%) contrast(106%);
+        }
+
+        .footer1 {
+            max-width: 615px;
+            order: 1;
+        }
+
+        .footer1p1 {
+            width: 350px;
+        }
+
+
+        form {
+            margin-bottom: 50px;
+        }
+
+
+        input[type=text] {
+            min-width: 300px;
+            height: 50px;
+            border-radius: 8px;
+            border-color: #00252E;
+        }
+        input[type=submit] {
+            min-width: 195px;
+            width: 200px;
+            height: 53px;
+            background-color: #FE52C0;
+            border: 1px solid #CCC;
+            border-color: #FE52C0;
+            border-radius: 12px;
+            color: white;
+            margin-left: 99px;
+        }
+        input {
+            margin-top: 20px;
+        }
+
+
+        .footer2 {
+            width: 400px;
+            order: 0;
+        }
+
+
+        .contact {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        .contact div {
+            margin-bottom: 10px;
+        }
+        .contact img {
+            margin-right: 15px;
+        }
+
+        .desktop {
+            justify-content: space-between;
+        }
+
+        .socialLink div {
+            display: inline-block;
+        }
+        .socialLink {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            filter: invert(92%) sepia(100%) saturate(0%) hue-rotate(202deg) brightness(106%) contrast(106%);
+        }
+        .socialLink > div:nth-of-type(2), .socialLink > div:nth-of-type(3) {
+            margin-left: 15px;
+        }
+
+
+        .containerT1{
+            display: flex;
+            flex-flow: row-reverse wrap;
+            justify-content: space-between;
+            background-color: #F6FBFF;
+        }
+
+        .containerT2 {
+            justify-content: space-between;
+        }
+        .containerT2::before {
+            background-color: white;
+            width: 100%;
+            content: " ";
+            position: absolute;
+            background-image: url(images/bg-section-bottom-desktop-1.svg);
+            background-size: cover;
+            left: 0;
+            height: 150px;
+        }
+
+        .informative img {
+            width: 400px;
+        }
+
+        .img1 {
+            flex-basis: 360px;
+        }
+        .img1 img {
+            width: 100%;
+            max-width: 500px;
+        }
+
+
+
+        @media screen and (max-width: 753px) {
+            .containerT1, .containerT2 {
+                justify-content: center;
+            }
+        }
+
+        @media screen and (min-width: 770px) {
+            .stats-container {
+                display: flex;
+                flex-flow: row wrap;
+            }
+
+            .stats-container .stats:nth-of-type(1) {
+                align-self: flex-start;
+            }
+
+            .stats-container .stats:nth-of-type(2) {
+                align-self: flex-end;
+            }
+
+        }
+
+        @media screen and (max-width: 1127px) {
+            .desktop {
+                justify-content: center;
+            }
+
+            .logo2 {
+                text-align: center;
+            }
+
+            .footer1 {
+                order: 0;
+            }
+
+            .footer2 {
+                order: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="main-container">
+    <div class="center">
+        <header class="container">
+            <div class="logo">
+                <img src="images/logo.svg" alt="logo.svg"/>
+            </div>
+            <div class="tryitBtn button"><a href="#">Try it free</a></div>
+        </header>
+
+        <div id="container2" class="column-container">
+            <h1>Build The Community Your Fans Will Love</h1>
+            <p>
+                Huddle re-imagines the way we build communities. You have a voice, but so does
+                your audience. Create connections with your users as you engage in genuine discussion.
+            </p>
+            <div class="buttonCustom1 button btnCustomCommon"><a href="#">Get Started For Free</a></div>
+        </div>
+
+        <div class="img"><img src="images/screen-mockups.svg" alt="screen-mockups.svg"/></div>
+    </div>
+</div>
+<div class="column-container stats-container">
+    <div class="stats">
+        <div class="stats-logo"><img src="images/icon-communities.svg" alt="icon-communites.svg"/></div>
+        <span>1.4k+</span>
+        <h3 style="line-height: 30px">Communities Formed</h3>
+    </div>
+    <div class="stats">
+        <div class="stats-logo"><img src="images/icon-messages.svg" alt="icon-messages.svg"/></div>
+        <span>2.7m+</span>
+        <h3>Messages Sent</h3>
+    </div>
+</div>
+
+<div class="containerT1 informative">
+    <div class="img1"><img src="images/illustration-grow-together.svg" alt="Grow-Together.svg"></div>
+    <div class="illustrationText">
+        <h1>Grow Together</h1>
+        <p>
+            Generate meaningful discussions with your audience and build a strong, loyal community.
+            Think of the insightful conversations you miss out on with a feedback form.
+        </p>
+    </div>
+</div>
+
+<div class="containerT2 container informative">
+    <div class="img1" style="margin-top: 180px;"><img src="images/illustration-flowing-conversation.svg" alt="flowing-conversation.svg"></div>
+    <div class="illustrationText">
+        <h1>Flowing Conversations</h1>
+        <p>
+            You wouldn't paginate a conversation in real life, so why do it online? Our threads have
+            just-in-time loading for a more natural flow.
+        </p>
+    </div>
+</div>
+
+<div class="containerT1 informative youruser">
+    <div class="img1"><img src="images/illustration-your-users.svg" alt="your-users.svg"></div>
+    <div class="illustrationText">
+        <h1 style="margin-top: -80px;">Your Users</h1>
+        <p>
+            It takes no time at all to integrate Huddle with your app's authentication solution. This means,
+            once signed in to your app, your users can start chatting immediately.
+        </p>
+    </div>
+</div>
+
+<div class="footer column-container">
+    <h1>Ready To Build Your Community?</h1>
+    <div class="button buttonCustom btnCustomCommon"><a href="#">Get Started For Free</a></div>
+</div>
+
+<div class="innerfooter container">
+    <div class="center">
+        <div class="desktop container">
+            <div class="footer1 container">
+                <div class="footer1p1">
+                    <h1>Newsletter</h1>
+                    <p>
+                        To recieve tips on how to grow your community, sign up to our weekly newsletter. We’ll never
+                        send you spam or pass on your email address
+                    </p>
+                </div>
+                <div class="footer1p2 container">
+                    <form class="container" action="#" method="post">
+                        <input type="text" name="emailSubscribe" id="emailSubscribe" required/>
+                        <input type="submit" value="Subscribe"/>
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="footer2">
+                <div class="logo2">
+                    <img src="images/logo.svg" alt="logo.svg"/>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla quam, hendrerit lacinia
+                    vestibulum a, ultrices quis sem.
+                </p>
+
+                <div class="contact">
+                    <div><img src="images/icon-phone.svg" alt="phone-icon" /> Phone: +1-543-123-4567</div>
+                    <div><img src="images/icon-email.svg" alt="email-icon" /> example@huddle.com</div>
+                </div>
+
+                <div class="socialLink">
+                    <div><a href="https://www.facebook.com/"><img src="images/facebook.svg" alt="facebook.svg" /></a></div>
+                    <div><a href="https://www.instagram.com/"><img src="images/instagram.svg" alt="instagram.svg" /></a></div>
+                    <div><a href="https://twitter.com/"><img src="images/twitter.svg" alt="twitter.svg" /></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+            Coded by <a href="#">Your Name Here</a>.
+        </p>
+    </footer>
+</div>
+</body>
+</html>
